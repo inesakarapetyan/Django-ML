@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+</head>
+<body>
+    <h1>Make a Prediction</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+          <label for="input_data">Input Data:</label>
+          <input type="number" name="input_data[]" required>
+        </div>
+        <div>
+          <label for="input_data">Input Data:</label>
+          <input type="number" name="input_data[]" required>
+        </div>
+        <div>
+          <label for="input_data">Input Data:</label>
+          <input type="number" name="input_data[]" required>
+        </div>
+        <button type="submit">Predict</button>
+      </form>
+      
+      {% if predictions %}
+        <p>Predictions: {{ predictions }}</p>
+      {% endif %}
+</body>
+</html>
